@@ -37,23 +37,6 @@ import org.springframework.util.ClassUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
-/**
- * Base class for concrete, full-fledged {@link BeanDefinition} classes,
- * factoring out common properties of {@link GenericBeanDefinition},
- * {@link RootBeanDefinition}, and {@link ChildBeanDefinition}.
- *
- * <p>The autowire constants match the ones defined in the
- * {@link org.springframework.beans.factory.config.AutowireCapableBeanFactory}
- * interface.
- *
- * @author Rod Johnson
- * @author Juergen Hoeller
- * @author Rob Harrop
- * @author Mark Fisher
- * @see GenericBeanDefinition
- * @see RootBeanDefinition
- * @see ChildBeanDefinition
- */
 @SuppressWarnings("serial")
 public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccessor
         implements BeanDefinition, Cloneable {
@@ -110,11 +93,6 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
      */
     public static final int DEPENDENCY_CHECK_OBJECTS = 1;
 
-    /**
-     * Constant that indicates dependency checking for "simple" properties.
-     * @see #setDependencyCheck
-     * @see org.springframework.beans.BeanUtils#isSimpleProperty
-     */
     public static final int DEPENDENCY_CHECK_SIMPLE = 2;
 
     /**

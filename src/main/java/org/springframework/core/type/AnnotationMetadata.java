@@ -18,19 +18,7 @@ package org.springframework.core.type;
 
 import java.util.Set;
 
-/**
- * Interface that defines abstract access to the annotations of a specific
- * class, in a form that does not require that class to be loaded yet.
- *
- * @author Juergen Hoeller
- * @author Mark Fisher
- * @author Phillip Webb
- * @author Sam Brannen
- * @since 2.5
- * @see StandardAnnotationMetadata
- * @see org.springframework.core.type.classreading.MetadataReader#getAnnotationMetadata()
- * @see AnnotatedTypeMetadata
- */
+
 public interface AnnotationMetadata extends ClassMetadata, AnnotatedTypeMetadata {
 
     /**
