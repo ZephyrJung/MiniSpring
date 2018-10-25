@@ -640,37 +640,6 @@ public abstract class MethodVisitor {
         }
     }
 
-    /**
-     * Visits an annotation on an instruction. This method must be called just
-     * <i>after</i> the annotated instruction. It can be called several times
-     * for the same instruction.
-     *
-     * @param typeRef
-     *            a reference to the annotated type. The sort of this type
-     *            reference must be {@link TypeReference#INSTANCEOF INSTANCEOF},
-     *            {@link TypeReference#NEW NEW},
-     *            {@link TypeReference#CONSTRUCTOR_REFERENCE
-     *            CONSTRUCTOR_REFERENCE}, {@link TypeReference#METHOD_REFERENCE
-     *            METHOD_REFERENCE}, {@link TypeReference#CAST CAST},
-     *            {@link TypeReference#CONSTRUCTOR_INVOCATION_TYPE_ARGUMENT
-     *            CONSTRUCTOR_INVOCATION_TYPE_ARGUMENT},
-     *            {@link TypeReference#METHOD_INVOCATION_TYPE_ARGUMENT
-     *            METHOD_INVOCATION_TYPE_ARGUMENT},
-     *            {@link TypeReference#CONSTRUCTOR_REFERENCE_TYPE_ARGUMENT
-     *            CONSTRUCTOR_REFERENCE_TYPE_ARGUMENT}, or
-     *            {@link TypeReference#METHOD_REFERENCE_TYPE_ARGUMENT
-     *            METHOD_REFERENCE_TYPE_ARGUMENT}. See {@link TypeReference}.
-     * @param typePath
-     *            the path to the annotated type argument, wildcard bound, array
-     *            element type, or static inner type within 'typeRef'. May be
-     *            <tt>null</tt> if the annotation targets 'typeRef' as a whole.
-     * @param desc
-     *            the class descriptor of the annotation class.
-     * @param visible
-     *            <tt>true</tt> if the annotation is visible at runtime.
-     * @return a visitor to visit the annotation values, or <tt>null</tt> if
-     *         this visitor is not interested in visiting this annotation.
-     */
     public AnnotationVisitor visitInsnAnnotation(int typeRef,
                                                  TypePath typePath, String desc, boolean visible) {
 		/* SPRING PATCH: REMOVED FOR COMPATIBILITY WITH CGLIB 3.1
