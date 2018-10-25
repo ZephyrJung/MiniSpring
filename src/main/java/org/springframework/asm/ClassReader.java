@@ -29,9 +29,6 @@
  */
 package org.springframework.asm;
 
-import jdk.internal.org.objectweb.asm.Handle;
-import jdk.internal.org.objectweb.asm.Type;
-
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -78,23 +75,8 @@ public class ClassReader {
      */
     public static final int SKIP_CODE = 1;
 
-    /**
-     * Flag to skip the debug information in the class. If this flag is set the
-     * debug information of the class is not visited, i.e. the
-     * {@link MethodVisitor#visitLocalVariable visitLocalVariable} and
-     * {@link MethodVisitor#visitLineNumber visitLineNumber} methods will not be
-     * called.
-     */
     public static final int SKIP_DEBUG = 2;
 
-    /**
-     * Flag to skip the stack map frames in the class. If this flag is set the
-     * stack map frames of the class is not visited, i.e. the
-     * {@link MethodVisitor#visitFrame visitFrame} method will not be called.
-     * This flag is useful when the {@link ClassWriter#COMPUTE_FRAMES} option is
-     * used: it avoids visiting frames that will be ignored and recomputed from
-     * scratch in the class writer.
-     */
     public static final int SKIP_FRAMES = 4;
 
     /**
@@ -122,11 +104,6 @@ public class ClassReader {
      */
     static final int EXPAND_ASM_INSNS = 256;
 
-    /**
-     * The class to be parsed. <i>The content of this array must not be
-     * modified. This field is intended for {@link Attribute} sub classes, and
-     * is normally not needed by class generators or adapters.</i>
-     */
     public final byte[] b;
 
     /**
