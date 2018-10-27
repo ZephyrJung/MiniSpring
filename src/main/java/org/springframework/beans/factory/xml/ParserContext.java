@@ -42,7 +42,7 @@ public final class ParserContext {
 
     private final XmlReaderContext readerContext;
 
-    private final org.springframework.beans.factory.xml.BeanDefinitionParserDelegate delegate;
+    private final BeanDefinitionParserDelegate delegate;
 
     @Nullable
     private BeanDefinition containingBeanDefinition;
