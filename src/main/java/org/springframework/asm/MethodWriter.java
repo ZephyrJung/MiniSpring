@@ -29,8 +29,6 @@
  */
 package org.springframework.asm;
 
-import jdk.internal.org.objectweb.asm.Handle;
-
 /**
  * A {@link MethodVisitor} that generates methods in bytecode form. Each visit
  * method of this class appends the bytecode corresponding to the visited
