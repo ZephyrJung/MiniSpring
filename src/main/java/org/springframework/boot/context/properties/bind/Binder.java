@@ -16,7 +16,6 @@
 
 package org.springframework.boot.context.properties.bind;
 
-import java.net.BindException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
